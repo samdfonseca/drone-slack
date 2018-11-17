@@ -2,43 +2,57 @@
 
 
 [[projects]]
+  digest = "1:4333e9d9cc731d01e67e19c33da46e95860b95f8b8032bc586d69b169e1b0c1b"
   name = "github.com/aymerick/raymond"
   packages = [
     ".",
     "ast",
     "lexer",
-    "parser"
+    "parser",
   ]
+  pruneopts = "UT"
   revision = "2eebd0f5dd9564c0c6e439df11d8a3c7b9b9ab11"
   version = "v2.0.2"
 
 [[projects]]
   branch = "master"
+  digest = "1:b781c6ce2a81ea819878fe0e907182aa2d3e55629408a9fdbfdff62789f93614"
   name = "github.com/bluele/slack"
   packages = ["."]
+  pruneopts = "UT"
   revision = "7f3862e374f157ad3f23c3092fa23b744d87c68d"
 
 [[projects]]
   branch = "master"
+  digest = "1:424d6a3ee46171455054a1d821c658c22802a798ba8e687fdc2edaca9eb30c8a"
   name = "github.com/drone/drone-template-lib"
   packages = ["template"]
+  pruneopts = "UT"
   revision = "5748d3149f4859c6d6cf43edb4fa35bba379c918"
 
 [[projects]]
+  digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
   name = "github.com/pkg/errors"
   packages = ["."]
+  pruneopts = "UT"
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
 [[projects]]
+  digest = "1:b24d38b282bacf9791408a080f606370efa3d364e4b5fd9ba0f7b87786d3b679"
   name = "github.com/urfave/cli"
   packages = ["."]
+  pruneopts = "UT"
   revision = "cfb38830724cc34fedffe9a2a29fb54fa9169cd1"
   version = "v1.20.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "3d8c61bc2319554c0a5c3c646f0b6e252f10d39de566ad7c57e85d613b8bc960"
+  input-imports = [
+    "github.com/bluele/slack",
+    "github.com/drone/drone-template-lib/template",
+    "github.com/urfave/cli",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

@@ -45,6 +45,11 @@ func main() {
 			Usage:  "slack template",
 			EnvVar: "PLUGIN_TEMPLATE",
 		},
+		cli.StringFlag{
+			Name: "types-results",
+			Usage: "types xml results file",
+			EnvVar: "PLUGIN_JUNIT_RESULTS",
+		},
 		cli.BoolFlag{
 			Name:   "link-names",
 			Usage:  "slack link names",
@@ -200,5 +205,9 @@ func run(c *cli.Context) error {
 		},
 	}
 
-	return plugin.Exec()
+	payload, err := plugin.PrepPayload()
+	if err != nil {
+		log.Fatal(err)
+	}
+	return plugin.Exec(payload)
 }
