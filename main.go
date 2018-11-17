@@ -46,8 +46,8 @@ func main() {
 			EnvVar: "PLUGIN_TEMPLATE",
 		},
 		cli.StringFlag{
-			Name: "types-results",
-			Usage: "types xml results file",
+			Name: "junit-results",
+			Usage: "junit xml results file",
 			EnvVar: "PLUGIN_JUNIT_RESULTS",
 		},
 		cli.BoolFlag{
