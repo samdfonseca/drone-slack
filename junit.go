@@ -1,9 +1,7 @@
 // Based on https://github.com/rodrigodiez/go-junit
-package types
+package main
 
-import (
-	"encoding/xml"
-)
+import "encoding/xml"
 
 type (
 	JUnitFailure struct {

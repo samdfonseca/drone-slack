@@ -8,7 +8,6 @@ import (
 	"strings"
 
 	"github.com/bluele/slack"
-	junitTypes "github.com/drone-plugins/drone-slack/types"
 	"github.com/drone/drone-template-lib/template"
 )
 
@@ -33,7 +32,7 @@ type (
 		Link        string
 		Started     int64
 		Created     int64
-		JUnitReport *junitTypes.JUnitTestsuites
+		JUnitReport *JUnitTestsuites
 	}
 
 	Config struct {
@@ -89,7 +88,7 @@ func (p *Plugin) PrepPayload() (*slack.WebHookPostPayload, error) {
 		if err != nil {
 			return nil, err
 		}
-		var report junitTypes.JUnitTestsuites
+		var report JUnitTestsuites
 		buf, err := ioutil.ReadAll(resFile)
 		if err != nil {
 			return nil, err
