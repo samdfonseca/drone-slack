@@ -1,4 +1,4 @@
-FROM plugins/base:multiarch
+FROM plugins/base:amd64
 
 LABEL maintainer="Drone.IO Community <drone-dev@googlegroups.com>" \
   org.label-schema.name="Drone Slack" \
